@@ -11,7 +11,7 @@ typedef struct dll {
   node *last;
   int length;
 } dll;
-void createdll(dll *dl) {
+void createDll(dll *dl) {
   dl->head = NULL;
   dl->last = NULL;
   dl->length = 0;
@@ -65,7 +65,7 @@ void insertAtPosition(dll *dl, int n, int pos) {
   current->next = ptr;
   dl->length++;
 }
-void display(dll *dl) {
+void displayDll(dll *dl) {
   node *current;
   current = dl->head;
   while (current != NULL) {

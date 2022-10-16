@@ -1,19 +1,20 @@
-#include "DLL.h"
+#include "Varchar.h"
 #include <stdio.h>
 int main() {
-  dll dl;
-  createdll(&dl);
-  insertIntoEmpty(&dl, 100);
-  insertBegin(&dl, 50);
-  insertEnd(&dl, 200);
-  insertEnd(&dl, 100000);
-  insertAtPosition(&dl, 400, 2);
-
-  printf("\n%d deleted\n", deleteBegin(&dl));
-  deleteEnd(&dl);
-  deleteAtPosition(&dl, 2);
-
-  display(&dl);
-  printf("\nLength of the doubly linked list is :  %d", length(&dl));
+  int maxLen,lengthVar,i;
+  Varchar vch;
+  char c=' ';
+  printf("Enter max length of varchar: ");
+  scanf("%d", &maxLen);
+  createVarchar(&vch,maxLen);
+  printf("Enter length of String: ");
+  scanf("%d", &lengthVar);
+  scanf("%c",&c);
+  for(i=0;i<lengthVar;i++){
+    scanf("%c",&c);
+    insertChar(&vch, c);
+  }
+  reverse(&vch);
+  display(&vch);
   return 0;
 }
