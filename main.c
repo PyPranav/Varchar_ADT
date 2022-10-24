@@ -14,7 +14,9 @@ int main() {
     scanf("%c",&c);
     insertChar(&vch, c);
   }
-  reverse(&vch);
+  display(&vch);
+  printf("\n");
+  strip(&vch,'l');
   display(&vch);
   return 0;
 }
